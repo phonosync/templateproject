@@ -1,0 +1,21 @@
+name: sample
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh
+  - ipykernel
+  - ipympl
+  - ipywidgets
+  - jupyterlab
+  - ffmpeg
+  - pandas
+  - pandas-profiling
+  - python=3.8
+  - scikit-learn
+  - scikit-plot
+  - seaborn
+  - pip
+  - pip:
+      - PyMuPDF==1.19.6
