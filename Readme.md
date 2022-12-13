@@ -13,5 +13,11 @@ $ conda env update --name sample --file sample.yml --prune
 ```
 `prune` uninstalls dependencies which were removed from sample.yml
 
-## General Structure of Readme-Files on Github
+## Use Environment
+before working on the project always make sure you have the environment activated:
+```sh
+$ conda activate sample
+```
+## Additional Information
+See "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
