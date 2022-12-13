@@ -1,5 +1,5 @@
 # Sample Project
-Change `sample` to the reseptive project name in
+Change `sample` to the respective project name in
 * filename of .yml file
 * environment name in .yml-file
 * in the commands below
@@ -12,3 +12,6 @@ $ conda install -f sample.yml
 $ conda env update --name sample --file sample.yml --prune
 ```
 `prune` uninstalls dependencies which were removed from sample.yml
+
+## General Structure of Readme-Files on Github
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
