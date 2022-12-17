@@ -5,7 +5,7 @@ Change `sample` to the respective project name in
 * in the commands below
 ## Setup Environment
 ```sh
-$ conda install -f sample.yml
+$ conda env create -f sample.yml
 ```
 ## Update Environment from File
 ```sh
