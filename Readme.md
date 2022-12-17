@@ -3,17 +3,20 @@ Change `sample` to the respective project name in
 * filename of .yml file
 * environment name in .yml-file
 * in the commands below
-## Setup Environment
+## Environment Setup
+**Install** conda environment:
 ```sh
 $ conda env create -f sample.yml
 ```
-## Update Environment from File
+**Update** the environment with new packages/versions:
+1. modify template.yml
+2. run `conda env update`:
 ```sh
 $ conda env update --name sample --file sample.yml --prune
 ```
 `prune` uninstalls dependencies which were removed from sample.yml
 
-## Use Environment
+**Use** environment:
 before working on the project always make sure you have the environment activated:
 ```sh
 $ conda activate sample
