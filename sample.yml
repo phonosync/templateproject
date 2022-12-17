@@ -5,14 +5,10 @@ channels:
   - defaults
 dependencies:
   - bokeh
-  - ipykernel
-  - ipympl
-  - ipywidgets
   - jupyterlab
-  - ffmpeg
   - pandas
   - pandas-profiling
-  - python=3.8
+  - python
   - scikit-learn
   - scikit-plot
   - seaborn
