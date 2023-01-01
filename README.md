@@ -21,6 +21,16 @@ before working on the project always make sure you have the environment activate
 ```sh
 $ conda activate sample
 ```
+
+**Remove** environment:
+```sh
+$ conda env remove -n sample
+```
+
+**List** all installed environments:
+```sh
+$ conda env list
+```
 ## Additional Information
 See "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
