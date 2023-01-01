@@ -22,15 +22,28 @@ before working on the project always make sure you have the environment activate
 $ conda activate sample
 ```
 
+**Check the version** of a specific package (e.g. `html5lib`) in the environment:
+```sh
+$ conda list html5lib
+```
+
+**Export** an environment file across platforms:
+Include only the packages that were specifically installed. Dependencies will be resolved upon installation
+```sh
+$ conda env export --from-history > sample.yml
+```
+
+**List** all installed environments:
+From the base environment run
+```sh
+$ conda info --envs
+```
+
 **Remove** environment:
 ```sh
 $ conda env remove -n sample
 ```
 
-**List** all installed environments:
-```sh
-$ conda env list
-```
 ## Additional Information
 See "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
