@@ -44,6 +44,7 @@ $ conda info --envs
 $ conda env remove -n sample
 ```
 
+See the complete documentation on [managing conda-environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 ## Additional Information
 See "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
