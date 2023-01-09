@@ -1,4 +1,5 @@
 # Python Development Guide
+Based on work by Filip Nowak. Thank you!
 
 ## The Zen of Python
 ```python
@@ -53,8 +54,7 @@ statistics = True
 
 Requirement: Don't use lambdas if possible.
 
-Rationale: In Python they have severe limitations, and rarely are really needed. They can make code harder to
-understand, without real benefit.
+Rationale: In Python they have severe limitations, and rarely are really needed. They can make code harder to understand, without real benefit.
 
 ## Prefer idiomatic Python
 
@@ -162,15 +162,13 @@ def fun2():
         fun1()
 ```
 
-Rationale: Exceptions which are relevant to - for example - file system operations sometimes can be remediated, handled in I/O-related code. The higher in the code hierarchy you are, the less
-likely is that they could be handled (there will be no code specialized in taking care of file system I/O for example), or that they will be useful. Exceptions should be contained where they
+Rationale: Exceptions which are relevant to - for example - file system operations sometimes can be remediated, handled in I/O-related code. The higher in the code hierarchy you are, the less likely is that they could be handled (there will be no code specialized in taking care of file system I/O for example), or that they will be useful. Exceptions should be contained where they
 were raised, but relevant messages or failure reasons, in case of need, can be emmiteded as return values from methods in which that happened.
-
 
 ## Don't (ab)use inheritance
 
-Requirement: Prefer composition over inheritance. Don't succumb to [inheritance diamond](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), don't rely on too much on Method Resolution Order.
-The longer the inheritance chain, the more [smelly code](https://en.wikipedia.org/wiki/Code_smell) is.
+Requirement: Prefer composition over inheritance. Don't succumb to the [inheritance diamond](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), don't rely too much on method resolution order.
+The longer the inheritance chain, the [smellier the code](https://en.wikipedia.org/wiki/Code_smell) is.
 
 Rationale: Code structre should be simple enough to understand it without exercising things like [C3 linearization](https://en.wikipedia.org/wiki/C3_linearization).
 
@@ -199,7 +197,7 @@ Rationale: It can cause [side effects](https://en.wikipedia.org/wiki/Side_effect
 
 ## [Embrace simplicity](https://www.python.org/dev/peps/pep-0020/)
 
-Requirement: Prefer simplicity and readability over "clever" and smart code. Keep things simple, but not simpler then required.
+Requirement: Prefer simplicity and readability over "clever" and smart code. Keep things simple, but not simpler than required.
 
 Rationale: Simple is better than complex ;)
 
@@ -276,9 +274,7 @@ By mixed tests we mean:
   questions like "does version X of `A` work with version Y of DB driver and Z of Python?").
 
 ## Use pull requests and code reviews
-
-Requirement: Use version control system workflows, which allow to use pull requests as a way to contribute the code,
-and always use it.
+Requirement: Use version control system workflows and pull requests as a way to contribute to the code.
 All of the pull requests, need to be reviewed.
 
 Rationale: Check [wikipedia article](https://en.wikipedia.org/wiki/Code_review) on that.
@@ -318,9 +314,9 @@ root folder
 
 ## Application configuration
 ### Minimize numbers of configuration variables
-For small projects: Use Code-level-defaults and runtime configuration
+For small projects: Use code-level-defaults and runtime configuration
 
 ### Manifest `runtime configuration` as environmental variables
-Requirement: As in the point title. This is also where access credentials etc. are managed. Keep a template configuration file into version control system.
+This is also where access credentials etc. are managed. Keep a template configuration file in the version control system.
 
-Rationale: This is one of the canonical ways of configuring containerized applications. Great support for Python through `dotenv` package.
+Rationale: This is one of the canonical ways of configuring containerised applications. Great support for Python through `dotenv` package.
