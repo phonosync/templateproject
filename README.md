@@ -61,8 +61,9 @@ from dotenv import load_dotenv
 
 ```python
 load_dotenv()
-True
 ```
+True
+
 which can then be accessed:
 
 ```python
