@@ -45,6 +45,31 @@ $ conda env remove -n sample
 ```
 
 See the complete documentation on [managing conda-environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
+## Runtime configuration with environment variables
+The environment variables are specified in a .env-File, which is never commited into version control, as it may contain secrets. The repo just contains the file `.env.template` to demonstrate how environment variables are specified.
+
+You have to create a local copy of `.env.template` in the project root folder and the easiest is to just name it `.env`.
+
+The content of the .env-file is then read by the pypi-dependency: `python-dotenv`. Usage:
+```python
+import os
+from dotenv import load_dotenv
+```
+
+`load_dotenv` reads the .env-file and sets the environment variables:
+
+```python
+load_dotenv()
+True
+```
+which can then be accessed:
+
+```python
+os.environ['SAMPLE_VAR']
+'blabliblub'
+```
+
 ## Additional Information
 See "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
