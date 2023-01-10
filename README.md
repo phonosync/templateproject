@@ -46,7 +46,7 @@ $ conda env remove -n sample
 
 See the complete documentation on [managing conda-environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
-## Runtime configuration with environment variables
+## Runtime Configuration with Environment Variables
 The environment variables are specified in a .env-File, which is never commited into version control, as it may contain secrets. The repo just contains the file `.env.template` to demonstrate how environment variables are specified.
 
 You have to create a local copy of `.env.template` in the project root folder and the easiest is to just name it `.env`.
