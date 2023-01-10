@@ -62,13 +62,11 @@ from dotenv import load_dotenv
 ```python
 load_dotenv()
 ```
-True
 
 which can then be accessed:
 
 ```python
 os.environ['SAMPLE_VAR']
-'blabliblub'
 ```
 
 ## Additional Information
