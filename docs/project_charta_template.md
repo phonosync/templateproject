@@ -1,4 +1,4 @@
-# Project Charta: <PROJECT NAME>
+# `PROJECT NAME` - Project Charta
 ## Problem Definition
 Formulate the problem and important information about the domain and/or business area in which the product is to be developed: What exactly is the problem and the expected benefit of the project? Why should we undertake this effort?   
 This includes a summary of the most important findings from the user analysis: relevant segments and user groups. Describe the problems and needs of the users of the product to be developed. 
@@ -33,16 +33,33 @@ Such a requirement should be aligned with the overall project goals and/or liter
 
 
 ## Project Plan
-Divide the project into individual phases, describe them briefly and draw up a preliminary timetable.
+Divide the project into individual phases, describe them briefly and draw up a preliminary timetable, e.g. as a Gantt chart:
 
 ```mermaid
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
+    tickInterval 5day
+    section Project Understanding
+        Define problem,     :a1, 2024-07-01, 1d
+        Determine project goals     :a2, 2024-07-01, 1d
+        List available resources     :a3, 2024-07-02, 1d
+        Set data mining goals    :a4, 2024-07-03, 1d
+        Create project plan    :a5, 2024-07-03, 1d
+        Project checkpoint: milestone, m1, 2024-07-4, 4m
+    section Data Acquisition and Exploration
+        Acquire data :a6, 2024-07-02, 2d
+        Exploratory data analysis   :a7, 2024-07-03, 2d
+        
+    section Modelling
+        Create initial model   :a8, 2024-07-09, 1d
+        Additional feature engineering :a9, 2024-07-10, 1d
+        Prepare modelling report :a10, 2024-07-10, 2h
+    section Evaluation
+        Prepare presentation :a10, 2024-07-10, 2h
+        Project presentation : milestone, m2, 2024-07-11, 4m
 ```
+See [Mermaid syntax for Gantt charts](https://mermaid.js.org/syntax/gantt.html).
+
+## Roles and Contact Details
+List the people involved in the development work here with their role titles, tasks and contact details

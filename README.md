@@ -69,6 +69,21 @@ which can then be accessed (assuming the file contains a line `SAMPLE_VAR=<some 
 os.environ['SAMPLE_VAR']
 ```
 
-## Additional Information
-See "About Readmes" on Github
+## Project Organisation
+
+![The Data Science Process - Kempf D. and Dömer M. in Archives of Data Science, Series A, vol 8, p. 12, 2022. doi:10.5445/IR/1000150238](figs/dsprocess.svg)
+
+Code and configurations used in the different project phases are stored in the subfolders
+* `data_acquisition`
+* `eda`
+* `modelling`
+
+Artefacts from the different project phases are provided in the subfolder `docs`:
+* Project charta
+* Data report
+* Modelling report
+
+## Further Information
+* "About Readmes" on Github
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+* [Python Dev Guide](refs/python_dev_guide.md)
