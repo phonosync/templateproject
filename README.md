@@ -4,6 +4,8 @@ Change `sample` to the respective project name in
 * environment name in .yml-file
 * in the commands below
 
+Adapted the `LICENSE` as required.
+
 Provide a brief description of the project here.
 
 ## Python Environment Setup and Management
