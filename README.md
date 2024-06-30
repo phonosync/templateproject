@@ -3,6 +3,9 @@ Change `sample` to the respective project name in
 * filename of .yml file
 * environment name in .yml-file
 * in the commands below
+
+Provide a brief description of the project here.
+
 ## Python Environment Setup and Management
 **Install** conda environment:
 ```sh
