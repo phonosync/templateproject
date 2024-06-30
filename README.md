@@ -49,7 +49,7 @@ See the complete documentation on [managing conda-environments](https://docs.con
 ## Runtime Configuration with Environment Variables
 The environment variables are specified in a .env-File, which is never commited into version control, as it may contain secrets. The repo just contains the file `.env.template` to demonstrate how environment variables are specified.
 
-You have to create a local copy of `.env.template` in the project root folder and the easiest is to just name it `.env`.
+You have to create a local copy of `.env.template` in the project root folder and the easiest is to just rename it to `.env`.
 
 The content of the .env-file is then read by the pypi-dependency: `python-dotenv`. Usage:
 ```python
@@ -63,7 +63,7 @@ from dotenv import load_dotenv
 load_dotenv()
 ```
 
-which can then be accessed:
+which can then be accessed (assuming the file contains a line `SAMPLE_VAR=<some value>`):
 
 ```python
 os.environ['SAMPLE_VAR']
