@@ -82,11 +82,13 @@ Code and configurations used in the different project phases are stored in the s
 * `data_acquisition`
 * `eda`
 * `modelling`
+* `deployment`
 
 Artefacts from the different project phases are provided in the subfolder `docs`:
 * Project charta
 * Data report
 * Modelling report
+* Evaluation decision log
 
 ## Further Information
 * "About Readmes" on Github

@@ -1,4 +1,4 @@
-# `PROJECT NAME` - Modelling Report
+# `Sample Project` - Modelling Report
 The report should summarise the details of the modelling activities, e.g. machine learning experiments. 
 
 ## Initial situation
