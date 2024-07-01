@@ -1,4 +1,4 @@
-# `PROJECT NAME` - Project Charta
+# `Sample Project` - Project Charta
 ## Problem Definition
 Formulate the problem and important information about the domain and/or business area in which the product is to be developed: What exactly is the problem and the expected benefit of the project? Why should we undertake this effort?   
 This includes a summary of the most important findings from the user analysis: relevant segments and user groups. Describe the problems and needs of the users of the product to be developed. 

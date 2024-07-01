@@ -75,8 +75,9 @@ os.environ['SAMPLE_VAR']
 ```
 
 ## Project Organisation
+According to [Is It Ops That Make Data Science Scientific? Archives of Data Science, Series A, vol 8, p. 12, 2022.](https://publikationen.bibliothek.kit.edu/1000150238/152958955)
 
-![The Data Science Process - Kempf D. and Dömer M. in Archives of Data Science, Series A, vol 8, p. 12, 2022. doi:10.5445/IR/1000150238](figs/dsprocess.svg)
+![The Data Science Process](figs/dsprocess.svg)
 
 Code and configurations used in the different project phases are stored in the subfolders
 * `data_acquisition`
