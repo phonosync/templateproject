@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: build
+  output-dir: _site
 
 website:
   title: "Sample Project"

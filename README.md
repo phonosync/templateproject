@@ -101,9 +101,9 @@ If Quarto is used to build a documentation website as described in the subsequen
 1. [Install Quarto](https://quarto.org/docs/get-started/)
 2. Optional: [quarto-extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
 3. Adapt the configuration file `docs/_quarto.yml` as needed.
-4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/build` subfolder.
+4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/_site` subfolder.
 
-To serve the documentation website as a github page, simply specify the `docs/build` subfolder as the source ([documentation](https://docs.github.com/de/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
+To serve the documentation website as a github page, simply specify the `docs/_site` subfolder as the source ([documentation](https://docs.github.com/de/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
 
 ## Further Information
 * "About Readmes" on Github
