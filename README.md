@@ -11,7 +11,7 @@ Provide a brief description of the project here.
 ## Project Organisation
 According to [Is It Ops That Make Data Science Scientific? Archives of Data Science, Series A, vol 8, p. 12, 2022.](https://publikationen.bibliothek.kit.edu/1000150238/152958955)
 
-![The Data Science Process](pics/dsprocess.svg)
+![The Data Science Process](docs/pics/dsprocess.png)
 
 Code and configurations used in the different project phases are stored in the subfolders
 * `data_acquisition`
