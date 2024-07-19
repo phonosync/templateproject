@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: build
 
 website:
   title: "Sample Project"
@@ -27,6 +27,11 @@ format:
   pdf:
     documentclass: scrreprt
     number-sections: true
+
+jupyter: python3
+
+execute:
+  freeze: auto
 
 editor:
   render-on-save: true

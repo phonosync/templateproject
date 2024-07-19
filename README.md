@@ -25,7 +25,7 @@ Templates for the documentation artefacts from the different project phases are 
 * Modelling report
 * Evaluation decision log
 
-See section `Quarto Setup and Usage` for instructions on how to build the documentation website from the indvidual reports using Quarto.
+See section `Quarto Setup and Usage` for instructions on how to build and serve the documentation website from the indvidual reports using Quarto.
 
 Simple Markdown-Templates are provided as an alternative in `docs/md-templates` - remove if not needed.
 
@@ -101,9 +101,32 @@ If Quarto is used to build a documentation website as described in the subsequen
 1. [Install Quarto](https://quarto.org/docs/get-started/)
 2. Optional: [quarto-extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
 3. Adapt the configuration file `docs/_quarto.yml` as needed.
-4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/_site` subfolder.
+4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/build` subfolder.
+5. The you can check the website locally by opening `docs/build/index.html` in a browser
 
-To serve the documentation website as a github page, simply specify the `docs/_site` subfolder as the source ([documentation](https://docs.github.com/de/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
+If you would like to use github pages to serve the documentation website, and at the same time avoid pushing the rendered files into the repo (makes very ugly diffs) but running the computations only locally the initial setup (only needed once) of the github action is according to https://quarto.org/docs/publishing/github-pages.html#github-action as follows: 
+
+1. Add 
+    ```
+        execute:
+            freeze: auto
+    ```
+    to the `_quarto.yml` file
+2. execute `quarto render` from the `docs` folder
+3. run `quarto publish gh-pages` (generates and pushes a branch called `gh-pages`)
+4. configure github pages to serve the root of the `gh-pages` branch
+4. add the definition of the action `.github/workflows/publish.yml`
+5. check all of the newly created files (including the `_freeze` directory) into the `main` branche of the repository 
+6. `docs/build` is exclude by the `.gitignore`
+7. then push to `main`
+
+From now on, every update just needs:
+
+1. Build the website by running `quarto render` from the `docs` subfolder. This will push the rendered files into `docs/build` (not checked into the repository via .gitignore) and computations in the `docs/_freeze` (checked in so that github action runners to not need python) subfolder.
+2. Check the website locally by opening the  `docs/build/index.html`
+3. Push all updated files into the `main` branch. This will trigger a github action that
+    - pushes an update to the `github-pages` branch
+    - renders and publishes the site to https://phonosync.github.io/sample/
 
 ## Further Information
 * "About Readmes" on Github
