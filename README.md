@@ -8,6 +8,27 @@ Adapted the `LICENSE` as required.
 
 Provide a brief description of the project here.
 
+## Project Organisation
+According to [Is It Ops That Make Data Science Scientific? Archives of Data Science, Series A, vol 8, p. 12, 2022.](https://publikationen.bibliothek.kit.edu/1000150238/152958955)
+
+![The Data Science Process](pics/dsprocess.svg)
+
+Code and configurations used in the different project phases are stored in the subfolders
+* `data_acquisition`
+* `eda`
+* `modelling`
+* `deployment`
+
+Templates for the documentation artefacts from the different project phases are provided in the subfolder `docs` in the form of a Quarto project:
+* Project charta
+* Data report
+* Modelling report
+* Evaluation decision log
+
+See section `Quarto Setup and Usage` for instructions on how to build the documentation website from the indvidual reports using Quarto.
+
+Simple Markdown-Templates are provided as an alternative in `docs/md-templates` - remove if not needed.
+
 ## Python Environment Setup and Management
 **Install** conda environment:
 ```sh
@@ -74,22 +95,15 @@ which can then be accessed (assuming the file contains a line `SAMPLE_VAR=<some 
 os.environ['SAMPLE_VAR']
 ```
 
-## Project Organisation
-According to [Is It Ops That Make Data Science Scientific? Archives of Data Science, Series A, vol 8, p. 12, 2022.](https://publikationen.bibliothek.kit.edu/1000150238/152958955)
+## Quarto Setup and Usage
+If Quarto is used to build a documentation website as described in the subsequention section (Project Organisation), then you need to 
 
-![The Data Science Process](figs/dsprocess.svg)
+1. [Install Quarto](https://quarto.org/docs/get-started/)
+2. Optional: [quarto-extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+3. Adapt the configuration file `docs/_quarto.yml` as needed.
+4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/build` subfolder.
 
-Code and configurations used in the different project phases are stored in the subfolders
-* `data_acquisition`
-* `eda`
-* `modelling`
-* `deployment`
-
-Artefacts from the different project phases are provided in the subfolder `docs`:
-* Project charta
-* Data report
-* Modelling report
-* Evaluation decision log
+To serve the documentation website as a github page, simply specify the `docs/build` subfolder as the source ([documentation](https://docs.github.com/de/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
 
 ## Further Information
 * "About Readmes" on Github
