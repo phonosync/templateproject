@@ -46,7 +46,7 @@ gantt
         List available resources     :a3, 2024-07-02, 1d
         Set data mining goals    :a4, 2024-07-03, 1d
         Create project plan    :a5, 2024-07-03, 1d
-        Project checkpoint: milestone, m1, 2024-07-4, 4m
+        Project checkpoint: milestone, m1, 2024-07-04, 4m
     section Data Acquisition and Exploration
         Acquire data :a6, 2024-07-02, 2d
         Exploratory data analysis   :a7, 2024-07-03, 2d
