@@ -32,13 +32,13 @@ Simple Markdown-Templates are provided as an alternative in `docs/md-templates` 
 ## Python Environment Setup and Management
 **Install** conda environment:
 ```sh
-$ conda env create -f sample.yml
+$ conda env create -f conda.yml
 ```
 **Update** the environment with new packages/versions:
 1. modify template.yml
 2. run `conda env update`:
 ```sh
-$ conda env update --name sample --file sample.yml --prune
+$ conda env update --name sample --file conda.yml --prune
 ```
 `prune` uninstalls dependencies which were removed from sample.yml
 
@@ -56,7 +56,7 @@ $ conda list html5lib
 **Export** an environment file across platforms:
 Include only the packages that were specifically installed. Dependencies will be resolved upon installation
 ```sh
-$ conda env export --from-history > sample.yml
+$ conda env export --from-history > conda.yml
 ```
 
 **List** all installed environments:
