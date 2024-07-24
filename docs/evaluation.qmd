@@ -2,6 +2,7 @@
 This protocol summarises the decisions from the evaluation of the data mining phase, which are made, for example, in a workshop together with the client and other stakeholders.
 
 Decide:
+
 * Do results meet user needs?
 * Continuation of the project yes/no
 * Planning of the deployment

@@ -1,5 +1,6 @@
 # Sample Project
 Change `sample` to the respective project name in
+
 * filename of .yml file
 * environment name in .yml-file
 * in the commands below
@@ -14,12 +15,14 @@ According to [Is It Ops That Make Data Science Scientific? Archives of Data Scie
 ![The Data Science Process](docs/pics/dsprocess.png)
 
 Code and configurations used in the different project phases are stored in the subfolders
+
 * `data_acquisition`
 * `eda`
 * `modelling`
 * `deployment`
 
 Templates for the documentation artefacts from the different project phases are provided in the subfolder `docs` in the form of a Quarto project:
+
 * Project charta
 * Data report
 * Modelling report
