@@ -35,7 +35,11 @@ Such a requirement should be aligned with the overall project goals and/or liter
 ## Project Plan
 Divide the project into individual phases, describe them briefly and draw up a preliminary timetable, e.g. as a Gantt chart:
 
-```{mermaid}
+![Project Plan](pics/gantt-mermaid.png){#fig-project-plan}
+
+See [Mermaid syntax for Gantt charts](https://mermaid.js.org/syntax/gantt.html). It might not be displayed correctly in Safari &#8594; use Chrome. [Live editor with export functionality](https://mermaid.live/)
+
+```mermaid
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
@@ -59,8 +63,6 @@ gantt
         Prepare presentation :a10, 2024-07-10, 2h
         Project presentation : milestone, m2, 2024-07-11, 4m
 ```
-
-See [Mermaid syntax for Gantt charts](https://mermaid.js.org/syntax/gantt.html). It might not be displayed chorectly in Safari &#8594; use Chrome.
 
 ## Roles and Contact Details
 List the people involved in the development work here with their role titles, tasks and contact details

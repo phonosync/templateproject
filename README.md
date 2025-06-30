@@ -107,21 +107,56 @@ If Quarto is used to build a documentation website as described in the subsequen
 4. Build the website by running `quarto render` from the `docs` subfolder. This will push all files into the `docs/build` subfolder.
 5. The you can check the website locally by opening `docs/build/index.html` in a browser
 
-If you would like to use github pages to serve the documentation website, and at the same time avoid pushing the rendered files into the repo (makes very ugly diffs) but running the computations only locally the initial setup (only needed once) of the github action is according to https://quarto.org/docs/publishing/github-pages.html#github-action as follows: 
+If you would like to use github pages to serve the documentation website, and at the same time avoid pushing the rendered files into the repo (makes very ugly diffs) but executing embedded code blocks only locally, the initial setup (only needed once) of the github action is according to https://quarto.org/docs/publishing/github-pages.html#github-action as follows: 
 
 1. Add 
-    ```
+    ```yaml
         execute:
             freeze: auto
     ```
     to the `_quarto.yml` file
 2. execute `quarto render` from the `docs` folder
 3. run `quarto publish gh-pages` (generates and pushes a branch called `gh-pages`)
-4. configure github pages to serve the root of the `gh-pages` branch
-4. add the definition of the action `.github/workflows/publish.yml`
-5. check all of the newly created files (including the `_freeze` directory) into the `main` branche of the repository 
-6. `docs/build` is exclude by the `.gitignore`
+4. make sure that github pages is configured to serve the root of the `gh-pages` branch
+4. add the definition of the action `.github/workflows/publish.yml` (see below)
+5. check all of the newly created files (including the `_freeze` directory) into the `main` branch of the repository 
+6. `docs/build` is excluded by the `.gitignore`
 7. then push to `main`
+
+`.github/workflows/publish.yml`:
+```yaml
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+    
+      - name: Install librsvg
+        run: sudo apt-get install librsvg2-bin
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          path: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 
 From now on, every update just needs:
 
@@ -129,7 +164,7 @@ From now on, every update just needs:
 2. Check the website locally by opening the  `docs/build/index.html`
 3. Push all updated files into the `main` branch. This will trigger a github action that
     - pushes an update to the `github-pages` branch
-    - renders and publishes the site to https://phonosync.github.io/sample/
+    - renders and publishes the site to https://<your user handle>.github.io/sample/
 
 ## Further Information
 * "About Readmes" on Github
