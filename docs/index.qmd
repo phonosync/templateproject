@@ -4,3 +4,34 @@ title: "About This Documentation"
 
 ![The Data Science Process @DoemerKempf2022_1000150238](pics/dsprocess.svg)
 
+
+This is an example on how to incorporate executable Python code and show a figure output:
+
+```{python}
+#| label: fig-demo
+#| fig-cap: "A simple demonstration of executable Python code producing a figure object."
+#| #| echo: true
+#| code-fold: true
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+x = np.linspace(0, 2*np.pi, 100)
+y = np.sin(x)
+
+# Create the plot
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(x, y, color='blue', linewidth=2)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_title('Plot title')
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.show()
+```
+
+Then the figure can be referenced with @fig-demo.
