@@ -1,11 +1,13 @@
 # Sample Project
-Change `sample` to the respective project name in
+This is a template for a Data Science project using Python, conda for environment management and Quarto for documentation.
+
+To adapt to your individual project change `sample` to the respective project name in
 
 * filename of .yml file
 * environment name in .yml-file
 * in the commands below
 
-Adapted the `LICENSE` as required.
+Adapt the `LICENSE` as required.
 
 Provide a brief description of the project here.
 
@@ -29,8 +31,6 @@ Templates for the documentation artefacts from the different project phases are 
 * Evaluation decision log
 
 See section `Quarto Setup and Usage` for instructions on how to build and serve the documentation website from the indvidual reports using Quarto.
-
-Simple Markdown-Templates are provided as an alternative in `docs/md-templates` - remove if not needed.
 
 ## Python Environment Setup and Management
 **Install** conda environment:
@@ -99,7 +99,7 @@ os.environ['SAMPLE_VAR']
 ```
 
 ## Quarto Setup and Usage
-If Quarto is used to build a documentation website as described in the subsequention section (Project Organisation), then you need to 
+If Quarto is used to build a documentation website as described in the Project Organisation section, you need to 
 
 1. [Install Quarto](https://quarto.org/docs/get-started/)
 2. Optional: [quarto-extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
@@ -118,12 +118,12 @@ If you would like to use github pages to serve the documentation website, and at
 2. execute `quarto render` from the `docs` folder
 3. run `quarto publish gh-pages` (generates and pushes a branch called `gh-pages`)
 4. make sure that github pages is configured to serve the root of the `gh-pages` branch
-4. add the definition of the action `.github/workflows/publish.yml` (see below)
+4. add the definition of the github action workflow `.github/workflows/publish.yml` (see below)
 5. check all of the newly created files (including the `_freeze` directory) into the `main` branch of the repository 
 6. `docs/build` is excluded by the `.gitignore`
 7. then push to `main`
 
-`.github/workflows/publish.yml`:
+Github action workflow configuration file to add in `.github/workflows/publish.yml`:
 ```yaml
 on:
   workflow_dispatch:
@@ -165,6 +165,9 @@ From now on, every update just needs:
 3. Push all updated files into the `main` branch. This will trigger a github action that
     - pushes an update to the `github-pages` branch
     - renders and publishes the site to https://<your user handle>.github.io/sample/
+
+Additional notes:
+* Rendering `svg`-files requires the `librsvg` package. The github action (Linux Ubuntu) installs it via `sudo apt-get install librsvg2-bin`. To render locally, you need to install it on your system as well. On macOS, this can be done via `brew install librsvg`. On Windows you can use chocholatey to install it: `choco install rsvg-convet` (https://community.chocolatey.org/packages?&tags=librsvg).
 
 ## Further Information
 * "About Readmes" on Github

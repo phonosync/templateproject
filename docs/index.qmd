@@ -2,7 +2,7 @@
 title: "About This Documentation"
 ---
 
-![The Data Science Process @DoemerKempf2022_1000150238](pics/dsprocess.svg)
+![The Data Science Process @DoemerKempf2022_1000150238](pics/dsprocess.png)
 
 
 This is an example on how to incorporate executable Python code and show a figure output:
